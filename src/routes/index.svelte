@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import MetaData from "../components/metaData.svelte";
+  // import Rive from "$components/rive.svelte"
+</script>
+
+<MetaData content={{
+    title : "Knowledge Blog post, for dev",
+    description:"Demo description",
+    imageSrc: "ogImage.jpg",
+    imageAlt: "explore the space,explore the nature"
+}} />
