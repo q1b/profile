@@ -5,14 +5,11 @@ import { resolve } from 'path';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte',...mdsvexConfig.extensions],
+	extensions: ['.svelte', ...mdsvexConfig.extensions],
 
 	// Consult https://github.com/sveltejs/svelte-preprocess
 	// for more information about preprocessors
-	preprocess: [
-		preprocess(),
-		mdsvex(mdsvexConfig)
-	],
+	preprocess: [preprocess(), mdsvex(mdsvexConfig)],
 
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html

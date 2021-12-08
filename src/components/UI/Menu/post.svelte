@@ -1,0 +1,19 @@
+<script lang="ts">
+  export let href:string="", imgSrc:string,  title:string, notation:string ;
+</script>
+
+<li class="w-full flex flex-col items-center">
+  <a {href} class="relative navItem group w-full h-48 rounded-lg transition-colors" style="">
+    <div class="absolute inset-0 m-0 box-border">
+      <img class="w-0 h-0 max-w-full max-h-full min-w-full min-h-full object-cover block absolute inset-0 visible box-border rounded-lg m-auto p-0" sizes="100vw" src={imgSrc} alt="UIWTF" > 
+    </div>
+    <div class="absolute inset-0 bg-slate-900/30 transition-opacity opacity-0 group-hover:opacity-100 backdrop-blur-[1px] duration-300 rounded-lg shadow-white-lg dark:shadow-slate-lg" style="transition-timing-function: cubic-bezier(.2, .8, .2, 1);"></div>
+    <div class="absolute left-8 bottom-4 opacity-0 translate-y-4 group-hover:translate-y-0 group-hover:opacity-100 transition-opacity" style="
+      transition-property: opacity, transform;
+      transition-timing-function: cubic-bezier(0.4, 0.3, 0.7, 1);"
+    >
+      <h1 class="text-2xl font-bold text-white">{title}</h1>
+      <p class="text-white w-full pr-20">{notation}</p>
+    </div>
+  </a>
+</li>

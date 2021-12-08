@@ -4,6 +4,7 @@ interface Params {
 	filePath?: string;
 	buffer: Blob;
 	artboard: string;
+	stateMachines: string;
 }
 
 // async function getBuffer(filePath = '/animations/main.riv'): Promise<Blob> {
@@ -92,7 +93,7 @@ export function rivePlayer(node: HTMLCanvasElement, params: Params): void {
 				rive.resizeToCanvas();
 			}
 		}
-    updateBounds()
+		updateBounds();
 		node.dispatchEvent(new CustomEvent('riveActive', { detail: rive }));
 	});
 }

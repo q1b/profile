@@ -1,11 +1,12 @@
 <script>
-  import MetaData from "../components/metaData.svelte";
-  // import Rive from "$components/rive.svelte"
+	import MetaData from '../components/metaData.svelte';
 </script>
 
-<MetaData content={{
-    title : "Knowledge Blog post, for dev",
-    description:"Demo description",
-    imageSrc: "ogImage.jpg",
-    imageAlt: "explore the space,explore the nature"
-}} />
+<MetaData
+	content={{
+		title: 'Knoledge Blog post, for dev',
+		description: 'Demo description',
+		imageSrc: 'ogImage.jpg',
+		imageAlt: 'explor the space,explore the nature'
+	}}
+/>

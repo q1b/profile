@@ -1,0 +1,10 @@
+<script lang="ts">
+  export let title:string;
+</script>
+
+<li>
+  <h1 class="text-lg navItem sm:text-2xl text-sky-400 dark:text-purple-400 mb-8 font-medium leading-6" id="nav-dialog-title">{title}</h1>
+  <ul class="flex flex-col items-center w-full">
+    <slot/>
+  </ul>
+</li>

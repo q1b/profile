@@ -2,16 +2,16 @@ import type { Rive, RiveParameters } from 'rive-js';
 
 export type UseRiveParameters = Partial<Omit<RiveParameters, 'canvas'>> | null;
 
-export type RiveType = Rive | null 
+export type RiveType = Rive | null;
 
 export type UseRiveOptions = {
-  useDevicePixelRatio: boolean;
-  fitCanvasToArtboardHeight: boolean;
+	useDevicePixelRatio: boolean;
+	fitCanvasToArtboardHeight: boolean;
 };
 
 export type Dimensions = {
-  width: number;
-  height: number;
+	width: number;
+	height: number;
 };
 
 /**
@@ -20,6 +20,6 @@ export type Dimensions = {
  * @property destroy - When Instance get destryed .
  */
 export type RiveState = {
-  update: any,
-  destroy: any,
+	update: any;
+	destroy: any;
 };
