@@ -18,6 +18,10 @@
 <svelte:head>
 	<title>{content.title}</title>
 	<link rel="canonical" href={canonicalURL} />
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@1&family=Jua&family=Nunito:ital,wght@0,500;1,500&family=Skranji&display=swap" rel="stylesheet">
 	<!-- OpenGraph Tags -->
 	<meta property="og:title" content={content.title ?? SITE.title} />
 	<meta property="og:type" content="article" />

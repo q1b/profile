@@ -2,6 +2,19 @@
 @tailwind utilities;
 @tailwind components;
 
+@layer base {
+  :root {
+    --bg-size:0 5px;
+  }
+}
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
 @layer utilities {
   .tab-highlight-none {
     -webkit-tap-highlight-color: transparent;

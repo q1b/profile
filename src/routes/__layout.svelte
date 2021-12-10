@@ -19,10 +19,10 @@
   }
 </script>
 
-<main class="bg-slate-1000 w-full min-h-screen flex flex-col items-center">
+<main class="bg-white dark:bg-slate-1000 w-full min-h-screen flex gap-y-12 flex-col items-center pb-20">
 	<Navbar/>
   {#key key}
-    <div in:fly={{ y:200, duration:500, delay:500, easing:backInOut }} out:fly={{ y:200, duration:500,easing:circOut }} >
+    <div class="w-full flex flex-col max-w-5xl px-6 items-center" in:fly={{ y:200, duration:500, delay:500, easing:backInOut }} out:fly={{ y:200, duration:500,easing:circOut }} >
       <slot />
     </div>
   {/key}

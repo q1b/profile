@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let art: 'home' | 'nav' | 'themeBtn' | 'todo' | 'chat' | 'profile' | 'updates' | 'notes' | string;
+	export let art: 'themeBtn' |'home' | 'user' | 'home_green' | 'userGroupPurple' | string;
 	let windowWidth, windowHeight;
 	import { rivePlayer } from '../../actions/useRive2';
 
@@ -26,7 +26,7 @@
 	const hoverAnimation = (element) => {
 		let r = element.detail;
 		r.play();
-		let containerRef = element.target.parentElement;
+		let containerRef = element.target.parentElement.parentElement;
 		containerRef.onmouseenter = () => {
 			r.stateMachineInputs('switch')[0].fire();
 		};
@@ -43,27 +43,9 @@
 		<h1 class="text-white">I am loading</h1>
 	</div>
 {:then buf}
-	{#if art === 'home'}
-		<canvas use:rivePlayer={creRiveObj(buf, 'Home')} on:riveActive={hoverAnimation} id="canvas" />
-	{:else if art === 'todo'}
-		<canvas use:rivePlayer={creRiveObj(buf, 'Todo')} on:riveActive={hoverAnimation} id="canvas" />
-	{:else if art === 'updates'}
-		<canvas use:rivePlayer={creRiveObj(buf, 'News')} on:riveActive={hoverAnimation} id="canvas" />
-	{:else if art === 'nav' && windowWidth <= 640}
-		<button class="w-11 h-9">
-			<canvas
-				use:rivePlayer={creRiveObj(buf, 'Nav')}
-				on:riveActive={(e) => {
-					let rive = e.detail;
-					rive.play();
-					e.target.parentElement.onclick = () => {
-						rive.stateMachineInputs('switch')[0].fire();
-					};
-				}}
-				id="canvas"
-			/>
-		</button>
-	{:else if art === 'themeBtn'}
+	{#if art === 'home_green'}
+		<canvas use:rivePlayer={creRiveObj(buf, 'home_green')} on:riveActive={hoverAnimation} id="canvas" />
+	<!-- {:else if art === 'themeBtn'}
 		<button class="flex-shrink-0 w-12 h-12 overflow-hidden rounded-full">
 			<canvas
 				use:rivePlayer={creRiveObj(buf, 'SunToMoon')}
@@ -94,8 +76,10 @@
 				}}
 				id="canvas"
 			/>
-		</button>
-	{:else if art === 'chat'}
-		<canvas use:rivePlayer={creRiveObj(buf, 'Chat')} on:riveActive={hoverAnimation} id="canvas" />
-	{/if}
+		</button> -->
+	{:else if art === 'user_blue'}
+		<canvas use:rivePlayer={creRiveObj(buf, 'user_blue')} on:riveActive={hoverAnimation} id="canvas" />
+	{:else if art === 'userGroupPurple' }
+		<canvas use:rivePlayer={creRiveObj(buf, 'userGroupPurple')} on:riveActive={hoverAnimation} id="canvas" />
+		{/if}
 {/await}
