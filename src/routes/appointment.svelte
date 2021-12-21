@@ -15,12 +15,12 @@
 	}}
 />
 
-<section class="flex flex-col gap-y-2">
+<section class="flex flex-col gap-y-2 pb-96">
 	<main class="grid grid-cols-1 md:grid-cols-2  place-items-center gap-y-20 md:gap-y-0 md:gap-x-6 relative">
 		<div class="w-[90%] h-auto hidden sm:block aspect-[2/1] md:aspect-[3/4] rounded-2xl" style=" background-image: url('/pic_1.jpg'); background-size: cover; background-position: center;"></div>
-		<form action="#" method="POST" class="relative"> 
+		<form on:submit|preventDefault action="#" method="POST" class="relative"> 
 			<h1 class="text-2xl text-slate-700 font-jua p-2 absolute -top-12 left-0">book appointment</h1>
-			<div class="shadow-sm p-3 sm:p-0 h-full w-96 rounded-md sm:overflow-hidden">
+			<div class="shadow-sm p-3 sm:p-0 h-full w-96 rounded-md">
 				<div class="bg-white sm:p-6">
 					<div class="pt-6 grid grid-cols-2 gap-7">
 						<Input placeholder="first name" />

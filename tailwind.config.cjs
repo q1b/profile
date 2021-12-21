@@ -2,14 +2,13 @@ const colors = require('tailwindcss/lib/public/colors');
 const { easings } = require('postcss-easings');
 
 module.exports = {
-	mode: 'jit',
 	content: ['./src/**/*.{svelte,html}'],
 	darkMode: 'class',
 	theme: {
 		extend: {
 			aspectRadio:{
 				box: 1,
-				landscape: 4/3,
+				'landscape': 4/3,
 				portrait: 3/4,
 				widescreen: 16/9,
 				ultrawide: 18/5,
